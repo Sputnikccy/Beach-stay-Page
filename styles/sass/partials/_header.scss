@@ -1,0 +1,77 @@
+@use "./variables" as*;
+
+header {
+    background: url(../beach-final-images/home-image-1.jpg)no-repeat top center/100vw;
+
+    .nav {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2%;
+    }
+
+    .nav-bar {
+        color: $iceBlue;
+        max-width: 40%;
+        width: 40%;
+        display: flex;
+        justify-content: end;
+
+
+        ul {
+            display: flex;
+            justify-content: end;
+            list-style: none;
+            align-items: center;
+            max-width: 70%;
+            width: 100%;
+
+            li:nth-child(-n+3) {
+                padding-right: 10%;
+            }
+
+            li {
+
+                &:focus,
+                &:hover {
+                    color: $primary;
+                }
+
+            }
+        }
+
+    }
+
+    .header-content {
+        position: absolute;
+        top: 55%;
+        left: 31.5%;
+        display: flex;
+        flex-direction: column;
+
+
+        .welcome {
+            font: bold 6rem 'Lato';
+            color: $tertiary
+        }
+
+        a h2 {
+            font: 10rem $logoFont;
+            color: $secondary;
+        }
+    }
+
+    .header-img {
+        position: relative;
+        margin-top: 12%;
+        width: 40%;
+
+
+        img {
+            max-width: 100%;
+        }
+    }
+
+
+
+}
+

@@ -1,0 +1,31 @@
+@use "./variables" as *;
+
+body{
+    background-color: $iceBlue;
+}
+
+.wrapper {
+    max-width: 1260px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.button {
+    color: $iceBlue;
+    background-color:$secondary;
+    padding: 10px 20px;
+    text-align: center;
+    transition: 0.3s;
+
+    &:hover {
+        background-color: $iceBlue;
+        color:$secondary;
+        border:2px solid $secondary;
+    }
+
+    &:focus {
+        background-color: $iceBlue;
+        color: $secondary;
+        border:2px solid $secondary;
+    }
+}

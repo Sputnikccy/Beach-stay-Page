@@ -12,28 +12,87 @@
 </head>
 
 <body>
-    <header>
+    <header class="contact-header">
         <div class="wrapper">
-            <h1><a href="#">BEACHSTAYS<span class="sr-only">Blog Page</span></a></h1>
-            <nav class="nav-bar">
-                <ul>
-                    <li><a href="./index.html">HOME</a>
-                        <a href="./index.html">ABOUT</a>
-                        <a href="./blog.html">BLOG</a>
-                        <a href="./contact.html">CONTACT</a>
-                    </li>
-                </ul>
-            </nav> <!-- .nav-bar end -->
+            <div class="nav-container">
+                <h1><a href="./index.html">BEACHSTAYS<span class="sr-only">Contact Page</span></a></h1>
+                <nav class="nav-bar">
+                    <ul>
+                        <li><a href="./index.html">HOME</a></li>
+                        <li><a href="./index.html">ABOUT</a></li>
+                        <li> <a href="./blog.html">BLOG</a></li>
+                        <li><a href="#">CONTACT</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div><!-- .nav-bar end -->
         </div>
-        <a href="#">
-            <h2>Blog</h2>
-        </a>
+        <div class="title">
+            <a href="#">
+                <h2>Get in Touch</h2>
+            </a>
+        </div>
     </header>
     <!-------header end -------->
-    <section class="submit contact-submit">
+
+    <div class="contact-small-devices-header">
+
+        <input type="checkbox" id="toggler">
+        <label for="toggler">
+            <div class="hamburger-container">
+                <span></span>
+                <span></span>
+            </div>
+        </label>
+
+        <div class="nav-items">
+            <ul>
+                <li>
+                    <a href="./index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="./index.html">ABOUT</a>
+                </li>
+                <li><a href="./blog.html">BLOG</a>
+                </li>
+                <li><a href="./contact.html">CONTACT</a>
+                </li>
+            </ul>
+            </nav>
+        </div>
+    </div>
+    <!--------small-devices-header end--------------------------------->
+
+    <!--------small-devices-title start------------------------------>
+    <div class="contact-small-devices-title">
+
         <div class="wrapper">
+            <div class="logo">
+                <h1><a href="./index.html">BEACHSTAYS<span class="sr-only">Home Page</span></a></h1>
+            </div>
+        </div>
+
+        <div class="contact-small-devices-header-content">
+
+            <a href="#">
+                <h2>Get in Touch</h2>
+            </a>
+        </div>
+
+    </div>
+    <!--------small-devices-title end------------------------------>
+
+
+
+
+
+
+    <section class="submit contact-submit">
+
+        <div class="contact-submit-container">
             <form action="#">
                 <div class="form-container">
+
                     <div class="personal-details">
                         <label for="name" class="sr-only">Name</label>
                         <input type="text" id="name" placeholder="Name">
@@ -42,31 +101,40 @@
                         <input type="email" id="email-address" placeholder="Email address">
                     </div>
                     <textarea name="user-comment" id="user-commentary" rows="10" placeholder="Message"></textarea>
-                    <button type="submit">SUBMIT</button>
+                    <button type="submit" class="button">SUBMIT</button>
                 </div>
             </form>
             <!----form end ----->
 
             <div class="contact-info">
                 <ul>
-                    <li><a href=""><i class="fa-brands fa-facebook-f"></i></a>
-                        <a href=""><i class="fa-brands fa-instagram"></i></a>
-                        <a href=""><i class="fa-brands fa-twitter"></i></a>
-                        <a href=""><i class="fa-brands fa-whatsapp"></i></a>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li> <a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li> <a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li> <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
                     </li>
                 </ul>
-                <p>info@email.com</p>
-
-                <p>123 - 456 - 7890
-                    123 Oueen Street West.
-                    Unit 10
-                    Toronto, Ontario
-                    M5V2D5</p>
+                <p class="email">info@email.com</p>
+                <span>
+                    <p>123 - 456 - 7890</p>
+                    <p>123 Oueen Street West,
+                    <p>Unit 10</p>
+                    <p>Toronto, Ontario </p>
+                    <p> M5V2D5</p>
+                </span>
             </div>
         </div>
+        <!---contact-submit-container end --->
         </div>
     </section>
-    </section>
+
+    <footer>
+        <div class="footer-ending">
+            Copyright ⓒ 2019 HakerYou
+        </div>
+    </footer>
+
+
 </body>
 
 </html>

@@ -1,0 +1,272 @@
+@use "./variables" as *;
+
+body {
+    background-color: $iceBlue;
+}
+
+.contact-header {
+    background: url(../beach-final-images/contact-image-1.jpg) no-repeat top center/100vw;
+
+    height: 60vh;
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2%;
+    }
+
+    .title {
+        margin-left: 10%;
+        margin-top: 13%;
+
+        a {
+
+            h2 {
+                font-size: 8rem;
+                color: $iceBlue;
+            }
+        }
+    }
+}
+
+
+/* ------small-devices-header start------ */
+.contact-small-devices-header {
+    display: block;
+    padding: 0 18px;
+   
+
+    height: 40px;
+
+
+    #toggler {
+        display: none;
+        height: 50px;
+        width: 50px;
+
+
+        &:checked+label .hamburger-container
+        
+        span {
+            position: fixed;
+            
+            
+
+            &:nth-child(1) {
+                transform: rotate(45deg);
+                // top: 6px;
+                top:50px;
+                transition: top .2s ease-in-out, transform .2s ease-in-out .2s;
+            }
+
+            &:nth-child(2) {
+                transform: rotate(-45deg);
+                // top: -6px;
+                top:45px;
+                transition: top .2s ease-in-out, transform .2s ease-in-out .2s;
+            }
+
+        }
+
+        &:checked~.nav-items {
+            transform: scaleY(1);
+            background-color: $primary;
+            opacity: 1;
+            margin-top: -10%;
+            //fix hamburger menu when clicking it
+            position: fixed;
+        }
+
+
+
+    }
+
+    .hamburger-container {
+        display: block;
+        width: 50px;
+        height: 60px;
+        position: relative;
+        top: 25px;
+        // top: 10rem;
+        left: 85%;
+
+        span {
+            display: block;
+            height: 6px;
+            width: 50px;
+            background-color: white;
+            position: relative;
+            transition: transform .2s ease-in-out, top .2s ease-in-out .2s;
+            top: 6px;
+            z-index: 999;
+
+            &:nth-child(2) {
+                margin-top: 7px;
+            }
+        }
+
+    }
+
+    .nav-items {
+        height: 105vh;
+        width: 100%;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .1s ease-in-out .1s, opacity .2s ease-in-out .1s;
+        transform-origin: 50% 0;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        z-index: 900;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+
+            li {
+                padding: 18% 0;
+                font-family: 'Lato';
+
+                a {
+                    color: $iceBlue;
+
+                    font-size: 40px;
+
+                    &:hover {
+                        color: $tertiary;
+                    }
+                }
+            }
+        }
+    }
+}
+/* ------small-devices-header end------- */
+
+
+/* ------small-devices-title start------ */
+
+.contact-small-devices-title {
+    background: url(../beach-final-images/contact-image-1.jpg) no-repeat top center / cover;
+    height: 30vh;
+    
+    margin-top: -7%;
+
+    h1 {
+        padding-top: 7%;
+    }
+
+    .contact-small-devices-header-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        // padding-top: 40%;
+        margin: 20% auto;
+
+        a {
+            h2 {
+                // font-family: $logoFont;
+                color: $iceBlue;
+                font-size: 7rem;
+                margin-top: -7%;
+            }
+
+        }
+
+    }
+}
+
+/* ------small-devices-title end------ */
+
+
+.contact-submit {
+    height: 60vh;
+
+
+    .contact-submit-container {
+
+        display: flex;
+        justify-content: space-between;
+
+        form {
+         margin-top: -8rem;
+           
+            width: 60%;
+            box-shadow: 1px #e2e3e5;
+            margin-left: 5%;
+            box-shadow: 20px 20px $primary;
+
+            .form-container {
+                padding: 3rem;
+                background-color: white;
+
+                .personal-details {
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 4%;
+                    font-family: 'Lato-light';
+
+                    #name,
+                    #email-address {
+                        border-bottom: 2px solid $primary;
+                        padding-right: 3rem;
+                        width: 45%;
+                        padding: 2rem;
+
+                    }
+                }
+
+                #user-commentary {
+                    border: 2px solid $primary;
+                    width: 100%;
+                    resize: none;
+                    padding: 2rem;
+                    outline: none;
+                }
+
+                button {
+                    margin-top: 3%;
+                    width: 100%;
+                }
+
+            }
+        }
+
+        .contact-info {
+            margin-right: 5%;
+            margin-top: 10%;
+            
+            ul{
+                list-style: none;
+                color:$black;
+                display: flex;
+               
+
+                li{
+                   padding-right: 1.5rem;
+                }
+            }
+
+            .email{
+                letter-spacing: .4rem;
+                margin: 5px 0;
+                font-weight: 800;
+                font-size: 2.5rem;
+            }
+
+            span{
+                p{
+                    font-size: 2rem;
+                }
+               
+            }
+        }
+    }
+}
+

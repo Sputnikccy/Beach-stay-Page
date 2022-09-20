@@ -120,9 +120,8 @@ svg:not(:root) {
 }
 
 button, input, optgroup, select, textarea {
-  font-family: sans-serif;
+  font-family: "Lato-light";
   font-size: 100%;
-  line-height: 1.15;
   margin: 0;
 }
 
@@ -259,22 +258,27 @@ template {
   font-weight: bold;
 }
 @font-face {
-  font-family: "Lato";
-  src: url(../fonts/Lato2OFLWeb/Lato/fonts/Lato-Regular.woff), url(../fonts/Lato2OFLWeb/Lato/fonts/Lato-Regular.woff2);
-  font-weight: 400;
+  font-family: "Latoo";
+  src: url(../fonts/Lato2OFLWeb/Lato/fonts/Lato-Regular.ttf), url(../fonts/Lato2OFLWeb/Lato/fonts/Lato-Regular.woff), url(../fonts/Lato2OFLWeb/Lato/fonts/Lato-Regular.woff2);
+  font-weight: normal;
 }
 @font-face {
-  font-family: "Lato";
+  font-family: "Lato-light";
   src: url(../fonts/Lato2OFLWeb/Lato/fonts/Lato-Light.woff), url(../fonts/Lato2OFLWeb/Lato/fonts/Lato-Light.woff2);
   font-weight: light;
+}
+@font-face {
+  font-family: "Bergen";
+  src: url(../fonts/bergen-sans-bold.woff/bergen-sans-bold.woff.ttf);
+  font-weight: bold;
 }
 html {
   font-size: 62.5%;
 }
 
 body {
-  font-family: "Lato";
-  font-size: 2rem;
+  font-family: "Latoo";
+  font-size: 1.9rem;
   color: #50E3C2;
   line-height: 32px;
 }
@@ -288,7 +292,7 @@ h1 {
 }
 
 h1 {
-  font-size: 3.64rem;
+  font-size: 2.8rem;
 }
 
 h2 {
@@ -315,11 +319,12 @@ h4 {
   line-height: 5.8rem;
   letter-spacing: 0.32rem;
   color: #0C5F4C;
+  margin: 0;
 }
 
 .button {
   font-family: "PlayfairDisplaySC";
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 3.2rem;
   letter-spacing: 0.01rem;
   font-style: italic;
@@ -337,7 +342,7 @@ p {
   letter-spacing: 0.02rem;
   color: #2C2C2C;
   margin: 0;
-  font-size: 2rem;
+  font-size: 1.9rem;
 }
 
 a {
@@ -354,14 +359,14 @@ body {
 
 .wrapper {
   max-width: 1260px;
-  width: 90%;
+  width: 80%;
   margin: 0 auto;
 }
 
 .button {
   color: #FAFFFE;
   background-color: #063974;
-  padding: 10px 20px;
+  padding: 8px 18px;
   text-align: center;
   -webkit-transition: 0.3s;
   transition: 0.3s;
@@ -375,6 +380,14 @@ body {
   background-color: #FAFFFE;
   color: #063974;
   border: 2px solid #063974;
+}
+
+footer .footer-ending {
+  background-color: black;
+  color: white;
+  max-width: 100vw;
+  font-size: 1.6rem;
+  text-align: center;
 }
 
 header {
@@ -422,7 +435,7 @@ header .nav-bar ul li:focus, header .nav-bar ul li:hover {
 }
 header .header-content {
   position: absolute;
-  top: 55%;
+  top: 38%;
   left: 31.5%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -433,11 +446,11 @@ header .header-content {
           flex-direction: column;
 }
 header .header-content .welcome {
-  font: bold 6rem "Lato";
+  font: bold 5rem "Lato";
   color: #0C5F4C;
 }
 header .header-content a h2 {
-  font: 10rem "PlayfairDisplaySC";
+  font: 8.2rem "PlayfairDisplaySC";
   color: #063974;
 }
 header .header-img {
@@ -449,6 +462,159 @@ header .header-img img {
   max-width: 100%;
 }
 
+/* ------small-devices-header start------ */
+.small-devices-header {
+  display: block;
+  padding: 0 18px;
+  height: 40px;
+}
+.small-devices-header #toggler {
+  display: none;
+  height: 50px;
+  width: 50px;
+}
+.small-devices-header #toggler:checked + label .hamburger-container span {
+  position: fixed;
+}
+.small-devices-header #toggler:checked + label .hamburger-container span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 50px;
+  -webkit-transition: top 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out 0.2s;
+  transition: top 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out 0.2s;
+  transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+  transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out 0.2s;
+}
+.small-devices-header #toggler:checked + label .hamburger-container span:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 45px;
+  -webkit-transition: top 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out 0.2s;
+  transition: top 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out 0.2s;
+  transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+  transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out 0.2s;
+}
+.small-devices-header #toggler:checked ~ .nav-items {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  background-color: #50E3C2;
+  opacity: 1;
+  margin-top: -10%;
+  position: fixed;
+}
+.small-devices-header .hamburger-container {
+  display: block;
+  width: 50px;
+  height: 60px;
+  position: relative;
+  top: 22px;
+  left: 85%;
+}
+.small-devices-header .hamburger-container span {
+  display: block;
+  height: 6px;
+  width: 40px;
+  background-color: white;
+  position: relative;
+  -webkit-transition: top 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, top 0.2s ease-in-out 0.2s;
+  transition: transform 0.2s ease-in-out, top 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out;
+  top: 7px;
+  z-index: 999;
+}
+.small-devices-header .hamburger-container span:nth-child(2) {
+  margin-top: 7px;
+}
+.small-devices-header .nav-items {
+  height: 105vh;
+  width: 100%;
+  position: absolute;
+  top: 44px;
+  left: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: opacity 0.2s ease-in-out 0.1s, -webkit-transform 0.1s ease-in-out 0.1s;
+  transition: opacity 0.2s ease-in-out 0.1s, -webkit-transform 0.1s ease-in-out 0.1s;
+  transition: transform 0.1s ease-in-out 0.1s, opacity 0.2s ease-in-out 0.1s;
+  transition: transform 0.1s ease-in-out 0.1s, opacity 0.2s ease-in-out 0.1s, -webkit-transform 0.1s ease-in-out 0.1s;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 900;
+}
+.small-devices-header .nav-items ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+.small-devices-header .nav-items ul li {
+  padding: 18% 0;
+  font-family: "Lato";
+}
+.small-devices-header .nav-items ul li a {
+  color: #FAFFFE;
+  font-size: 40px;
+}
+.small-devices-header .nav-items ul li a:hover {
+  color: #0C5F4C;
+}
+
+/* ------small-devices-header end------- */
+/* ------small-devices-title start------ */
+.small-devices-title {
+  background: url(../beach-final-images/home-image-1.jpg) no-repeat top center/cover;
+  height: 100vh;
+  margin-top: -8%;
+}
+.small-devices-title h1 {
+  padding-top: 8%;
+}
+.small-devices-title .small-devices-header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 40%;
+}
+.small-devices-title .small-devices-header-content h2 {
+  color: #0C5F4C;
+  font-size: 5.5rem;
+  margin-bottom: 5rem;
+}
+.small-devices-title .small-devices-header-content a h2 {
+  font-family: "PlayfairDisplaySC";
+  color: #063974;
+  font-size: 7rem;
+}
+
+/* ------small-devices-title end------ */
 main .about-beachstay {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -460,25 +626,1310 @@ main .about-beachstay {
 }
 main .about-beachstay .about-beachstay-content {
   margin-right: 7%;
-  -webkit-box-flex: 3.6;
-      -ms-flex: 3.6;
-          flex: 3.6;
+  -webkit-box-flex: 3.5;
+      -ms-flex: 3.5;
+          flex: 3.5;
 }
 main .about-beachstay .about-beachstay-content .button-container {
   margin-top: 2%;
 }
 main .about-beachstay .about-beachstay-img {
   width: 100%;
-  -webkit-box-flex: 1.4;
-      -ms-flex: 1.4;
-          flex: 1.4;
+  height: 100%;
+  -webkit-box-flex: 1.5;
+      -ms-flex: 1.5;
+          flex: 1.5;
   margin: auto 0.01%;
 }
 main .about-beachstay .about-beachstay-img img {
   max-width: 100%;
   max-height: 100%;
-  -webkit-box-shadow: -10px 10px #50E3C2;
-          box-shadow: -10px 10px #50E3C2;
+  -webkit-box-shadow: -20px 20px #50E3C2;
+          box-shadow: -20px 20px #50E3C2;
   -o-object-fit: cover;
      object-fit: cover;
+}
+main .small-devices-about-beachstay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 5%;
+}
+main .small-devices-about-beachstay .small-devices-about-beachstay-content {
+  text-align: center;
+}
+main .small-devices-about-beachstay .small-devices-about-beachstay-content .button-container {
+  margin-top: 2%;
+}
+main .small-devices-about-beachstay .small-devices-about-beachstay-img {
+  margin-bottom: 5%;
+  margin-top: 5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+main .small-devices-about-beachstay .small-devices-about-beachstay-img img {
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-box-shadow: -20px 20px #50E3C2;
+          box-shadow: -20px 20px #50E3C2;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main .gallery-container {
+  background-color: #D2F9F1;
+  margin-bottom: 5%;
+}
+main .gallery-container .gallery {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+main .gallery-container .gallery img {
+  max-width: 31%;
+}
+main .gallery-container .gallery img:nth-child(-n+2) {
+  margin-right: 3.3%;
+}
+main .bottom-nav-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 7%;
+}
+main .bottom-nav-content .bottomnav-container {
+  padding-right: 5%;
+  position: relative;
+  top: 4%;
+}
+main .bottom-nav-content .bottomnav-container a {
+  display: inline-block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #50E3C2;
+}
+main .bottom-nav-content .bottomnav-container a i {
+  color: white;
+  font-size: 2.2rem;
+  padding: 8px;
+}
+main .bottom-nav-content .beach-houses-bottom-nav-section,
+main .bottom-nav-content .community-bottom-nav-section,
+main .bottom-nav-content .blog-bottom-nav-section,
+main .bottom-nav-content .get-in-touch-bottom-nav-section {
+  -ms-flex-preferred-size: 48%;
+      flex-basis: 48%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+main .bottom-nav-content .beach-houses-bottom-nav-section,
+main .bottom-nav-content .community-bottom-nav-section {
+  padding-bottom: 3%;
+}
+main .plan {
+  background-color: #D2F9F1;
+}
+main .plan h3 {
+  color: #063974;
+}
+main .plan .plan-ahead-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 5%;
+}
+main .plan .plan-ahead-container .plan-img-left {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  margin-right: 10%;
+  position: relative;
+  top: -15px;
+}
+main .plan .plan-ahead-container .plan-img-left img {
+  -webkit-box-shadow: 20px 20px #50E3C2;
+          box-shadow: 20px 20px #50E3C2;
+}
+main .plan .plan-ahead-container .plan-ahead {
+  margin-right: 5%;
+  -ms-flex-preferred-size: 40%;
+      flex-basis: 40%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .plan .plan-ahead-container .plan-ahead .plan-ahead-content {
+  margin-top: 12%;
+}
+main .plan .plan-ahead-container .plan-ahead .plan-ahead-content p {
+  padding-top: 15px;
+}
+main .plan .plan-ahead-container .plan-ahead .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 155px;
+  height: 40px;
+  padding: 8px 18px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 3%;
+}
+main .plan .new-locations-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .plan .new-locations-container .new-locations {
+  margin-right: 5%;
+  -ms-flex-preferred-size: 42%;
+      flex-basis: 42%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  margin-left: 8%;
+}
+main .plan .new-locations-container .new-locations .new-locations-content {
+  text-align: right;
+}
+main .plan .new-locations-container .new-locations .new-locations-content p {
+  padding-top: 15px;
+}
+main .plan .new-locations-container .new-locations .button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 155px;
+  height: 40px;
+  padding: 8px 18px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 5%;
+}
+main .plan .new-locations-container .img-right {
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  position: relative;
+  top: 15px;
+  margin-left: 5%;
+  margin-top: 15px;
+}
+main .plan .new-locations-container .img-right img {
+  max-width: 100%;
+  -webkit-box-shadow: -20px 20px #50E3C2;
+          box-shadow: -20px 20px #50E3C2;
+}
+
+footer .footer-img img {
+  max-width: 100vw;
+}
+footer .footer-content {
+  margin: 10%;
+  margin-bottom: 15%;
+  text-align: center;
+}
+footer .footer-content p {
+  margin-bottom: 2%;
+}
+footer .footer-ending {
+  margin-top: 15%;
+}
+
+.blog-header {
+  background: url(../beach-final-images/blog-image-1.jpg) no-repeat top center/100vw;
+  height: 60vh;
+}
+.blog-header .nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 2%;
+}
+.blog-header .title {
+  margin-left: 10%;
+  margin-top: 10%;
+}
+.blog-header .title a h2 {
+  font-size: 8rem;
+  color: #FAFFFE;
+}
+
+/* ------small-devices-header start------ */
+.blog-small-devices-header {
+  display: block;
+  padding: 0 18px;
+  height: 40px;
+}
+.blog-small-devices-header #toggler {
+  display: none;
+  height: 50px;
+  width: 50px;
+}
+.blog-small-devices-header #toggler:checked + label .hamburger-container span {
+  position: fixed;
+}
+.blog-small-devices-header #toggler:checked + label .hamburger-container span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 50px;
+  -webkit-transition: top 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out 0.2s;
+  transition: top 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out 0.2s;
+  transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+  transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out 0.2s;
+}
+.blog-small-devices-header #toggler:checked + label .hamburger-container span:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 45px;
+  -webkit-transition: top 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out 0.2s;
+  transition: top 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out 0.2s;
+  transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+  transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out 0.2s;
+}
+.blog-small-devices-header #toggler:checked ~ .nav-items {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  background-color: #50E3C2;
+  opacity: 1;
+  margin-top: -10%;
+  position: fixed;
+}
+.blog-small-devices-header .hamburger-container {
+  display: block;
+  width: 50px;
+  height: 60px;
+  position: relative;
+  top: 25px;
+  left: 85%;
+}
+.blog-small-devices-header .hamburger-container span {
+  display: block;
+  height: 6px;
+  width: 50px;
+  background-color: white;
+  position: relative;
+  -webkit-transition: top 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, top 0.2s ease-in-out 0.2s;
+  transition: transform 0.2s ease-in-out, top 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out;
+  top: 6px;
+  z-index: 999;
+}
+.blog-small-devices-header .hamburger-container span:nth-child(2) {
+  margin-top: 7px;
+}
+.blog-small-devices-header .nav-items {
+  height: 105vh;
+  width: 100%;
+  position: absolute;
+  top: 44px;
+  left: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: opacity 0.2s ease-in-out 0.1s, -webkit-transform 0.1s ease-in-out 0.1s;
+  transition: opacity 0.2s ease-in-out 0.1s, -webkit-transform 0.1s ease-in-out 0.1s;
+  transition: transform 0.1s ease-in-out 0.1s, opacity 0.2s ease-in-out 0.1s;
+  transition: transform 0.1s ease-in-out 0.1s, opacity 0.2s ease-in-out 0.1s, -webkit-transform 0.1s ease-in-out 0.1s;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 900;
+}
+.blog-small-devices-header .nav-items ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+.blog-small-devices-header .nav-items ul li {
+  padding: 18% 0;
+  font-family: "Lato";
+}
+.blog-small-devices-header .nav-items ul li a {
+  color: #FAFFFE;
+  font-size: 40px;
+}
+.blog-small-devices-header .nav-items ul li a:hover {
+  color: #0C5F4C;
+}
+
+/* ------small-devices-header end------- */
+/* ------small-devices-title start------ */
+.blog-small-devices-title {
+  background: url(../beach-final-images/blog-image-1.jpg) no-repeat top center/cover;
+  height: 50vh;
+  margin-top: -8%;
+}
+.blog-small-devices-title h1 {
+  padding-top: 8%;
+}
+.blog-small-devices-title .blog-small-devices-header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20% auto;
+}
+.blog-small-devices-title .blog-small-devices-header-content a h2 {
+  color: #FAFFFE;
+  font-size: 7rem;
+}
+
+/* ------small-devices-title end------ */
+.blog-main .blog-main-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.blog-main .blog-main-container .fivedays {
+  border-right: 3px solid #50E3C2;
+  border-bottom: 3px solid #50E3C2;
+  margin-right: 8%;
+}
+.blog-main .blog-main-container .fivedays .fivedays-content {
+  padding-left: 4%;
+}
+.blog-main .blog-main-container .fivedays .fivedays-content .article {
+  color: black;
+}
+.blog-main .blog-main-container .fivedays .fivedays-content .date {
+  font-style: italic;
+  color: #063974;
+  margin-bottom: 2.5rem;
+}
+.blog-main .blog-main-container .fivedays .fivedays-content .date span {
+  font-weight: 900;
+}
+.blog-main .blog-main-container .fivedays .fivedays-img-container {
+  position: relative;
+  top: -8%;
+}
+.blog-main .blog-main-container .fivedays .fivedays-img-container img {
+  -webkit-box-shadow: 18px 18px #50E3C2;
+          box-shadow: 18px 18px #50E3C2;
+  width: 97.8%;
+}
+.blog-main .blog-main-container .fivedays .fivedays-content {
+  margin: 10%;
+  margin-top: -5%;
+}
+.blog-main .blog-main-container .sidebar {
+  position: sticky;
+  top: 0;
+  padding-top: 5%;
+  height: 0.1vh;
+  -ms-flex-preferred-size: 130%;
+      flex-basis: 130%;
+}
+.blog-main .blog-main-container .sidebar h4 {
+  color: #063974;
+  font-size: 2.6rem;
+  margin-top: 20px;
+}
+.blog-main .blog-main-container .sidebar p,
+.blog-main .blog-main-container .sidebar li {
+  color: black;
+}
+.blog-main .blog-main-container .sidebar .img-container {
+  width: 100%;
+}
+.blog-main .blog-main-container .sidebar .mission a {
+  color: #0C5F4C;
+}
+.blog-main .blog-main-container .sidebar .posts ul {
+  margin-left: 5%;
+}
+.blog-main .blog-main-container .sidebar .posts ul li::marker {
+  color: #50E3C2;
+}
+.blog-main .comments {
+  margin-top: 5%;
+  margin-bottom: 5%;
+  width: 70%;
+  margin-left: 2.5%;
+}
+.blog-main .comments h3 {
+  font-family: "Bergen";
+  color: black;
+  font-size: 2.8rem;
+}
+.blog-main .comments .comments-one {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 3%;
+}
+.blog-main .comments .comments-one .comments-one-img {
+  margin-right: 5%;
+  margin-top: 2.8%;
+  width: 50%;
+}
+.blog-main .comments .comments-one .comments-one-img img {
+  max-width: 100%;
+  width: 100%;
+}
+.blog-main .comments .comments-one .comments-one-content h4 {
+  font-size: 2.2rem;
+  margin: 0;
+  color: #063974;
+  letter-spacing: 0.2rem;
+}
+.blog-main .comments .comments-two {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 5%;
+  margin-bottom: 5%;
+}
+.blog-main .comments .comments-two .comments-two-img {
+  margin-right: 5%;
+  margin-top: 2.8%;
+  width: 35%;
+}
+.blog-main .comments .comments-two .comments-two-img img {
+  max-width: 100%;
+  width: 100%;
+}
+.blog-main .comments .comments-two .comments-two-content h4 {
+  font-size: 2.2rem;
+  margin: 0;
+  color: #063974;
+  letter-spacing: 0.2rem;
+}
+
+.blog-submit .form-container {
+  width: 70%;
+}
+.blog-submit .form-container .personal-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 4%;
+  font-family: "Lato-light";
+}
+.blog-submit .form-container .personal-details #name,
+.blog-submit .form-container .personal-details #email-address {
+  border-bottom: 2px solid #50E3C2;
+  padding-right: 3rem;
+  width: 45%;
+  padding: 2rem;
+}
+.blog-submit .form-container #user-commentary {
+  border: 2px solid #50E3C2;
+  width: 100%;
+  resize: none;
+  padding: 2rem;
+  outline: none;
+}
+.blog-submit .form-container button {
+  margin-top: 3%;
+  width: 100%;
+}
+
+body {
+  background-color: #FAFFFE;
+}
+
+.contact-header {
+  background: url(../beach-final-images/contact-image-1.jpg) no-repeat top center/100vw;
+  height: 60vh;
+}
+.contact-header .nav-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 2%;
+}
+.contact-header .title {
+  margin-left: 10%;
+  margin-top: 13%;
+}
+.contact-header .title a h2 {
+  font-size: 8rem;
+  color: #FAFFFE;
+}
+
+/* ------small-devices-header start------ */
+.contact-small-devices-header {
+  display: block;
+  padding: 0 18px;
+  height: 40px;
+}
+.contact-small-devices-header #toggler {
+  display: none;
+  height: 50px;
+  width: 50px;
+}
+.contact-small-devices-header #toggler:checked + label .hamburger-container span {
+  position: fixed;
+}
+.contact-small-devices-header #toggler:checked + label .hamburger-container span:nth-child(1) {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  top: 50px;
+  -webkit-transition: top 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out 0.2s;
+  transition: top 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out 0.2s;
+  transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+  transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out 0.2s;
+}
+.contact-small-devices-header #toggler:checked + label .hamburger-container span:nth-child(2) {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  top: 45px;
+  -webkit-transition: top 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out 0.2s;
+  transition: top 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out 0.2s;
+  transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
+  transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out 0.2s;
+}
+.contact-small-devices-header #toggler:checked ~ .nav-items {
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+  background-color: #50E3C2;
+  opacity: 1;
+  margin-top: -10%;
+  position: fixed;
+}
+.contact-small-devices-header .hamburger-container {
+  display: block;
+  width: 50px;
+  height: 60px;
+  position: relative;
+  top: 25px;
+  left: 85%;
+}
+.contact-small-devices-header .hamburger-container span {
+  display: block;
+  height: 6px;
+  width: 50px;
+  background-color: white;
+  position: relative;
+  -webkit-transition: top 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out;
+  transition: top 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out;
+  transition: transform 0.2s ease-in-out, top 0.2s ease-in-out 0.2s;
+  transition: transform 0.2s ease-in-out, top 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out;
+  top: 6px;
+  z-index: 999;
+}
+.contact-small-devices-header .hamburger-container span:nth-child(2) {
+  margin-top: 7px;
+}
+.contact-small-devices-header .nav-items {
+  height: 105vh;
+  width: 100%;
+  position: absolute;
+  top: 44px;
+  left: 0;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transition: opacity 0.2s ease-in-out 0.1s, -webkit-transform 0.1s ease-in-out 0.1s;
+  transition: opacity 0.2s ease-in-out 0.1s, -webkit-transform 0.1s ease-in-out 0.1s;
+  transition: transform 0.1s ease-in-out 0.1s, opacity 0.2s ease-in-out 0.1s;
+  transition: transform 0.1s ease-in-out 0.1s, opacity 0.2s ease-in-out 0.1s, -webkit-transform 0.1s ease-in-out 0.1s;
+  -webkit-transform-origin: 50% 0;
+          transform-origin: 50% 0;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 900;
+}
+.contact-small-devices-header .nav-items ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  list-style: none;
+}
+.contact-small-devices-header .nav-items ul li {
+  padding: 18% 0;
+  font-family: "Lato";
+}
+.contact-small-devices-header .nav-items ul li a {
+  color: #FAFFFE;
+  font-size: 40px;
+}
+.contact-small-devices-header .nav-items ul li a:hover {
+  color: #0C5F4C;
+}
+
+/* ------small-devices-header end------- */
+/* ------small-devices-title start------ */
+.contact-small-devices-title {
+  background: url(../beach-final-images/contact-image-1.jpg) no-repeat top center/cover;
+  height: 30vh;
+  margin-top: -7%;
+}
+.contact-small-devices-title h1 {
+  padding-top: 7%;
+}
+.contact-small-devices-title .contact-small-devices-header-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 20% auto;
+}
+.contact-small-devices-title .contact-small-devices-header-content a h2 {
+  color: #FAFFFE;
+  font-size: 7rem;
+  margin-top: -7%;
+}
+
+/* ------small-devices-title end------ */
+.contact-submit {
+  height: 60vh;
+}
+.contact-submit .contact-submit-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.contact-submit .contact-submit-container form {
+  margin-top: -8rem;
+  width: 60%;
+  -webkit-box-shadow: 1px #e2e3e5;
+          box-shadow: 1px #e2e3e5;
+  margin-left: 5%;
+  -webkit-box-shadow: 20px 20px #50E3C2;
+          box-shadow: 20px 20px #50E3C2;
+}
+.contact-submit .contact-submit-container form .form-container {
+  padding: 3rem;
+  background-color: white;
+}
+.contact-submit .contact-submit-container form .form-container .personal-details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 4%;
+  font-family: "Lato-light";
+}
+.contact-submit .contact-submit-container form .form-container .personal-details #name,
+.contact-submit .contact-submit-container form .form-container .personal-details #email-address {
+  border-bottom: 2px solid #50E3C2;
+  padding-right: 3rem;
+  width: 45%;
+  padding: 2rem;
+}
+.contact-submit .contact-submit-container form .form-container #user-commentary {
+  border: 2px solid #50E3C2;
+  width: 100%;
+  resize: none;
+  padding: 2rem;
+  outline: none;
+}
+.contact-submit .contact-submit-container form .form-container button {
+  margin-top: 3%;
+  width: 100%;
+}
+.contact-submit .contact-submit-container .contact-info {
+  margin-right: 5%;
+  margin-top: 10%;
+}
+.contact-submit .contact-submit-container .contact-info ul {
+  list-style: none;
+  color: #2C2C2C;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.contact-submit .contact-submit-container .contact-info ul li {
+  padding-right: 1.5rem;
+}
+.contact-submit .contact-submit-container .contact-info .email {
+  letter-spacing: 0.4rem;
+  margin: 5px 0;
+  font-weight: 800;
+  font-size: 2.5rem;
+}
+.contact-submit .contact-submit-container .contact-info span p {
+  font-size: 2rem;
+}
+
+/********BELOW 1440px*******/
+@media (max-width: 90em) {
+  .small-devices-header {
+    display: none;
+  }
+  .small-devices-title {
+    display: none;
+  }
+  .blog-small-devices-header {
+    display: none;
+  }
+  html {
+    font-size: 80%;
+  }
+  main .plan .plan-ahead-container .plan-ahead .button {
+    width: 200px;
+    height: 60px;
+  }
+  main .plan .mobile-new-locations-container {
+    display: none;
+  }
+  main .plan .new-locations-container .new-locations .button {
+    width: 200px;
+    height: 60px;
+  }
+  main .small-devices-about-beachstay {
+    display: none;
+  }
+  .blog-main .blog-main-container .fivedays .fivedays-img-container img {
+    width: 98.2%;
+  }
+  .blog-small-devices-title {
+    display: none;
+  }
+  .blog-small-devices-header {
+    display: none;
+  }
+  .contact-small-devices-title {
+    display: none;
+  }
+  .contact-small-devices-header {
+    display: none;
+  }
+}
+/********BELOW 1200px*******/
+@media (max-width: 75em) {
+  html {
+    font-size: 62.5%;
+  }
+  main .plan .plan-ahead-container .plan-ahead .button {
+    width: 150px;
+    height: 40px;
+  }
+  main .plan .new-locations-container .new-locations .button {
+    width: 150px;
+    height: 40px;
+  }
+  .blog-main .blog-main-container .fivedays .fivedays-img-container {
+    top: -5%;
+  }
+  .blog-main .blog-main-container .fivedays .fivedays-img-container img {
+    width: 98%;
+  }
+}
+/********BELOW 1024px*******/
+@media (max-width: 64em) {
+  html {
+    font-size: 55%;
+  }
+  main .plan .plan-ahead-container .plan-ahead .button {
+    width: 138px;
+    height: 38px;
+  }
+  main .plan .new-locations-container .new-locations .button {
+    width: 138px;
+    height: 38px;
+  }
+  .blog-main .blog-main-container .fivedays .fivedays-img-container {
+    top: -8%;
+  }
+  .blog-main .blog-main-container .fivedays .fivedays-img-container img {
+    width: 97.3%;
+  }
+}
+/********BELOW 1008px*******/
+@media (max-width: 63em) {
+  .blog-main .blog-main-container .fivedays .fivedays-img-container img {
+    width: 97.8%;
+  }
+}
+/********BELOW 848px*******/
+@media (max-width: 53em) {
+  html {
+    font-size: 50%;
+  }
+}
+/********BELOW 820px*******/
+@media (max-width: 51.25em) {
+  html {
+    font-size: 55%;
+  }
+  p {
+    font-size: 2rem;
+  }
+  .small-devices-header {
+    display: block;
+  }
+  .small-devices-title {
+    display: block;
+  }
+  .home-header {
+    display: none;
+  }
+  main .about-beachstay {
+    display: none;
+  }
+  main .small-devices-about-beachstay {
+    display: block;
+  }
+  main .gallery-container .gallery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    padding: 10px 0;
+  }
+  main .gallery-container .gallery img {
+    padding: 10px 0;
+  }
+  main .gallery-container .gallery img:nth-child(-n+2) {
+    margin-right: 0;
+  }
+  main .bottom-nav-content {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+  }
+  main .bottom-nav-content .beach-houses-bottom-nav-section,
+main .bottom-nav-content .community-bottom-nav-section,
+main .bottom-nav-content .blog-bottom-nav-section,
+main .bottom-nav-content .get-in-touch-bottom-nav-section {
+    padding: 30px 0;
+  }
+  main .plan .plan-ahead-container {
+    margin: 0 10%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: 5%;
+  }
+  main .plan .plan-ahead-container .plan-img-left {
+    margin-right: 0;
+  }
+  main .plan .plan-ahead-container .plan-ahead {
+    text-align: center;
+  }
+  main .plan .plan-ahead-container .plan-ahead .plan-ahead-content {
+    margin-top: 2%;
+  }
+  main .plan .plan-ahead-container .plan-ahead .button {
+    margin: 2% auto;
+    width: 140px;
+    height: 44px;
+  }
+  main .plan .new-locations-container {
+    display: none;
+  }
+  main .plan .mobile-new-locations-container {
+    display: block;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .plan .mobile-new-locations-container .small-devices-img-right {
+    max-width: 80%;
+  }
+  main .plan .mobile-new-locations-container .small-devices-img-right img {
+    -webkit-box-shadow: -20px 20px #50E3C2;
+            box-shadow: -20px 20px #50E3C2;
+  }
+  main .plan .mobile-new-locations-container .small-devices-new-locations {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  main .plan .mobile-new-locations-container .small-devices-new-locations .small-devices-new-locations-content {
+    text-align: center;
+  }
+  main .plan .mobile-new-locations-container .small-devices-new-locations .small-devices-new-locations-content h3 {
+    margin-top: 3%;
+  }
+  main .plan .mobile-new-locations-container .small-devices-new-locations .small-devices-new-locations-content p {
+    padding-top: 15px;
+  }
+  main .plan .mobile-new-locations-container .small-devices-new-locations .button {
+    margin: 2% 0;
+    margin-left: -5%;
+  }
+  .blog-header {
+    display: none;
+  }
+  .blog-small-devices-header {
+    display: block;
+  }
+  .blog-small-devices-title {
+    display: block;
+  }
+  .blog-main {
+    margin: 5% 10%;
+  }
+  .blog-main .blog-main-container {
+    width: 100%;
+    display: block;
+  }
+  .blog-main .blog-main-container .fivedays {
+    margin-right: 0;
+    border: 3px solid #50E3C2;
+    border-top: 0;
+  }
+  .blog-main .blog-main-container .fivedays .fivedays-content {
+    margin-top: 5%;
+  }
+  .blog-main .blog-main-container .fivedays .fivedays-img-container {
+    background-color: #50E3C2;
+  }
+  .blog-main .blog-main-container .sidebar {
+    position: relative;
+    height: auto;
+  }
+  .blog-main .blog-main-container .sidebar .img-container {
+    height: 45vh;
+    margin-left: 2%;
+  }
+  .blog-main .blog-main-container .sidebar .img-container img {
+    width: 98%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -webkit-box-shadow: -20px 20px #50E3C2;
+            box-shadow: -20px 20px #50E3C2;
+  }
+  .blog-main .blog-main-container .sidebar .mission-container {
+    padding-bottom: 8px;
+    -webkit-box-shadow: 2px 2px 2px 1px #e2e3e5;
+            box-shadow: 2px 2px 2px 1px #e2e3e5;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-top: 3%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    text-align: center;
+  }
+  .blog-main .blog-main-container .sidebar .mission-container .mission .blog-button {
+    font-family: "PlayfairDisplaySC";
+    font-size: 1.5rem;
+    color: #FAFFFE;
+    background-color: #063974;
+    padding: 8px 15px;
+    text-align: center;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+  }
+  .blog-main .blog-main-container .sidebar .mission-container .mission .blog-button:hover {
+    background-color: #FAFFFE;
+    color: #063974;
+    border: 2px solid #063974;
+  }
+  .blog-main .blog-main-container .sidebar .mission-container .mission .blog-button:focus {
+    background-color: #FAFFFE;
+    color: #063974;
+    border: 2px solid #063974;
+  }
+  .blog-main .blog-main-container .sidebar .mission-container .posts ul {
+    margin: 0;
+    list-style: none;
+  }
+  .blog-main .blog-main-container .sidebar .mission-container .posts ul li a:hover {
+    color: #50E3C2;
+  }
+  .blog-main .comments {
+    width: 100%;
+    margin-left: -4%;
+    margin-right: -4%;
+  }
+  .blog-main .comments h4 {
+    letter-spacing: 0.1rem;
+  }
+  .blog-submit .form-container {
+    width: 100%;
+  }
+  .contact-small-devices-title {
+    display: block;
+  }
+  .contact-small-devices-header {
+    display: block;
+  }
+  .contact-header {
+    display: none;
+  }
+  .contact-small-devices-title .contact-small-devices-header-content {
+    margin-top: 10%;
+  }
+  .contact-submit {
+    height: auto;
+  }
+  .contact-submit .contact-submit-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .contact-submit .contact-submit-container form {
+    margin: 3% auto;
+    width: 75%;
+    overflow: hidden;
+  }
+  .contact-submit .contact-submit-container .contact-info {
+    width: 100%;
+    text-align: center;
+  }
+  .contact-submit .contact-submit-container .contact-info ul {
+    margin: 0 38%;
+    font-size: 4rem;
+  }
+}
+/********BELOW 768px*******/
+@media (max-width: 48em) {
+  p {
+    font-size: 2.2rem;
+  }
+  main .plan .plan-ahead-container .plan-ahead .button {
+    width: 145px;
+  }
+  main .plan .mobile-new-locations-container .small-devices-new-locations .button {
+    width: 145px;
+  }
+  .blog-main .blog-main-container .fivedays .fivedays-img-container img {
+    width: 97%;
+  }
+  .blog-small-devices-title .blog-small-devices-header-content a h2 {
+    font-size: 7.5rem;
+    margin-top: -15%;
+  }
+  .blog-main .fivedays-content h3 {
+    letter-spacing: 0.2rem;
+  }
+  .blog-main .comments {
+    width: 110%;
+  }
+  .blog-main .comments .comments-one .comments-one-content h4 {
+    letter-spacing: 0;
+  }
+  .blog-main .comments .comments-two .comments-two-content h4 {
+    letter-spacing: 0;
+  }
+}
+/********BELOW 600px*******/
+@media (max-width: 37.5em) {
+  html {
+    font-size: 50%;
+  }
+}
+/********BELOW 496px*******/
+@media (max-width: 31em) {
+  html {
+    font-size: 45%;
+  }
+  .blog-main .fivedays-content h3 {
+    letter-spacing: 0;
+  }
+  .wrapper {
+    width: 90%;
+  }
+  .blog-main {
+    margin: 5% 5%;
+  }
+  .contact-small-devices-header .hamburger-container span {
+    width: 40px;
+  }
+  .contact-small-devices-title h1 {
+    padding-top: 4%;
+  }
+}
+/********BELOW 400px*******/
+@media (max-width: 25em) {
+  html {
+    font-size: 35%;
+  }
+  main .plan .plan-ahead-container .plan-ahead .button {
+    width: 130px;
+    height: 35px;
+  }
+  main .plan .new-locations-container .new-locations .button {
+    width: 130px;
+    height: 35px;
+  }
+}
+/********BELOW 320px*******/
+@media (max-width: 20em) {
+  html {
+    font-size: 28%;
+  }
+  .contact-small-devices-header .hamburger-container span {
+    width: 30px;
+  }
+  .small-devices-header .hamburger-container span {
+    width: 30px;
+    top: 15px;
+  }
+  .blog-small-devices-header .hamburger-container span {
+    width: 30px;
+    top: 15px;
+  }
 }

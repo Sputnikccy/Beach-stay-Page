@@ -1,0 +1,692 @@
+@use "./variables" as*;
+
+/********BELOW 1440px*******/
+@media (max-width: 90em) {
+    .small-devices-header {
+        display: none;
+    }
+
+    .small-devices-title {
+        display: none;
+    }
+
+    .blog-small-devices-header {
+        display: none;
+    }
+
+    html {
+        font-size: 80%;
+    }
+
+    main {
+        .plan {
+            .plan-ahead-container {
+                .plan-ahead {
+                    .button {
+                        width: 200px;
+                        height: 60px;
+                    }
+                }
+            }
+
+            .mobile-new-locations-container {
+                display: none;
+
+            }
+
+            .new-locations-container {
+                .new-locations {
+                    .button {
+                        width: 200px;
+                        height: 60px;
+                    }
+                }
+            }
+        }
+
+        .small-devices-about-beachstay {
+            display: none;
+        }
+    }
+
+    .blog-main {
+        .blog-main-container .fivedays .fivedays-img-container {
+
+            img {
+                width: 98.2%;
+            }
+        }
+    }
+
+    .blog-small-devices-title {
+        display: none;
+    }
+
+    .blog-small-devices-header {
+        display: none;
+    }
+
+    .contact-small-devices-title {
+        display: none;
+    }
+
+    .contact-small-devices-header {
+        display: none;
+    }
+
+}
+
+
+/********BELOW 1200px*******/
+@media (max-width: 75em) {
+    html {
+        font-size: 62.5%;
+    }
+
+    main {
+        .plan {
+            .plan-ahead-container {
+                .plan-ahead {
+                    .button {
+                        width: 150px;
+                        height: 40px;
+                    }
+                }
+            }
+
+            .new-locations-container {
+                .new-locations {
+                    .button {
+                        width: 150px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+
+    .blog-main {
+        .blog-main-container .fivedays .fivedays-img-container {
+            top: -5%;
+
+            img {
+                width: 98%;
+            }
+        }
+    }
+
+
+}
+
+
+/********BELOW 1024px*******/
+@media (max-width:64em) {
+    html {
+        font-size: 55%;
+    }
+
+    main {
+        .plan {
+            .plan-ahead-container {
+                .plan-ahead {
+                    .button {
+                        width: 138px;
+                        height: 38px;
+                    }
+                }
+            }
+
+            .new-locations-container {
+                .new-locations {
+                    .button {
+                        width: 138px;
+                        height: 38px;
+                    }
+                }
+            }
+        }
+    }
+
+    .blog-main {
+        .blog-main-container .fivedays .fivedays-img-container {
+            top: -8%;
+
+            img {
+                width: 97.3%;
+            }
+        }
+    }
+
+}
+
+
+/********BELOW 1008px*******/
+@media (max-width:63em) {
+    .blog-main {
+        .blog-main-container .fivedays .fivedays-img-container {
+
+            img {
+                width: 97.8%;
+            }
+        }
+    }
+}
+
+
+
+/********BELOW 848px*******/
+
+@media (max-width:53em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+
+/********BELOW 820px*******/
+@media (max-width:51.25em) {
+    html {
+        font-size: 55%;
+    }
+
+    p {
+        font-size: 2rem;
+    }
+
+    .small-devices-header {
+        display: block;
+
+    }
+
+    .small-devices-title {
+        display: block
+    }
+
+    .home-header {
+        display: none;
+    }
+
+    //home-page==========
+    main {
+        .about-beachstay {
+            display: none;
+        }
+
+        .small-devices-about-beachstay {
+            display: block;
+        }
+
+        .gallery-container {
+
+            .gallery {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+                width: 100%;
+                padding: 10px 0;
+
+                img {
+                    padding: 10px 0;
+
+                    &:nth-child(-n+2) {
+                        margin-right: 0
+                    }
+
+                }
+            }
+
+        }
+
+
+
+        .bottom-nav-content {
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            .beach-houses-bottom-nav-section,
+            .community-bottom-nav-section,
+            .blog-bottom-nav-section,
+            .get-in-touch-bottom-nav-section {
+                padding: 30px 0;
+            }
+        }
+
+        .plan {
+            .plan-ahead-container {
+                margin: 0 10%;
+                flex-direction: column;
+                align-items: center;
+                margin-bottom: 5%;
+
+                .plan-img-left {
+                    margin-right: 0;
+                }
+
+                .plan-ahead {
+                    text-align: center;
+
+
+                    .plan-ahead-content {
+                        margin-top: 2%;
+                    }
+
+                    .button {
+                        margin: 2% auto;
+                        width: 140px;
+                        height: 44px;
+                    }
+                }
+            }
+
+            .new-locations-container {
+                display: none;
+            }
+
+            .mobile-new-locations-container {
+                display: block;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+
+                .small-devices-img-right {
+                    max-width: 80%;
+
+                    img {
+                        box-shadow: -20px 20px $primary;
+                    }
+
+                }
+
+                .small-devices-new-locations {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+
+                    .small-devices-new-locations-content {
+                        text-align: center;
+
+                        h3 {
+                            margin-top: 3%;
+                        }
+
+                        p {
+                            padding-top: 15px;
+                        }
+                    }
+
+                    .button {
+                        margin: 2% 0;
+                        margin-left: -5%;
+
+                    }
+                }
+
+
+
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+    }
+
+    //home-page==========
+
+
+    //blog-page==========
+    .blog-header {
+        display: none;
+    }
+
+    .blog-small-devices-header {
+        display: block;
+    }
+
+    .blog-small-devices-title {
+        display: block;
+    }
+
+
+
+    .blog-main {
+        margin: 5% 10%;
+
+
+        .blog-main-container {
+            width: 100%;
+            display: block;
+
+            .fivedays {
+                margin-right: 0;
+                border: 3px solid $primary;
+                border-top: 0;
+
+                .fivedays-content {
+                    margin-top: 5%;
+                }
+
+
+                .fivedays-img-container {
+                    background-color: $primary;
+                }
+
+            }
+
+            .sidebar {
+
+
+                position: relative;
+                height: auto;
+
+                .img-container {
+                    height: 45vh;
+                    margin-left: 2%;
+
+                    img {
+                        width: 98%;
+                        // height:400px;
+                        height: 100%;
+                        object-fit: cover;
+                        box-shadow: -20px 20px $primary;
+                    }
+
+                }
+
+                .mission-container {
+                    padding-bottom: 8px;
+                    box-shadow: 2px 2px 2px 1px #e2e3e5;
+                    ;
+                    display: flex;
+                    flex-direction: column;
+                    margin-top: 3%;
+                    justify-content: center;
+                    text-align: center;
+
+                    .mission {
+                        .blog-button {
+
+                            font-family: $logoFont;
+                            font-size: 1.5rem;
+                            color: $iceBlue;
+                            background-color: $secondary;
+                            padding: 8px 15px;
+                            text-align: center;
+                            transition: 0.3s;
+
+                            &:hover {
+                                background-color: $iceBlue;
+                                color: $secondary;
+                                border: 2px solid $secondary;
+                            }
+
+                            &:focus {
+                                background-color: $iceBlue;
+                                color: $secondary;
+                                border: 2px solid $secondary;
+                            }
+                        }
+                    }
+
+
+
+
+                    .posts {
+                        ul {
+                            margin: 0;
+                            list-style: none;
+
+                            li {
+
+                                // &::before {
+                                //     content: '•';
+                                //     color: $primary;
+
+                                // }
+                                a {
+                                    &:hover {
+                                        color: $primary;
+                                    }
+                                }
+
+                            }
+                        }
+
+                    }
+
+                }
+
+            }
+        }
+
+        .comments {
+            width: 100%;
+            margin-left: -4%;
+            margin-right: -4%;
+
+            h4 {
+                letter-spacing: .1rem;
+            }
+        }
+
+
+    }
+
+    .blog-submit {
+        .form-container {
+            width: 100%;
+        }
+    }
+
+    //contact page===============
+    .contact-small-devices-title {
+        display: block;
+
+    }
+
+    .contact-small-devices-header {
+        display: block;
+    }
+
+    .contact-header {
+        display: none;
+    }
+
+    .contact-small-devices-title .contact-small-devices-header-content {
+        margin-top: 10%;
+    }
+
+    .contact-submit {
+        height: auto;
+
+        .contact-submit-container {
+            flex-direction: column;
+            align-items: center;
+
+            form {
+                margin: 3% auto;
+                width: 75%;
+                overflow: hidden;
+            }
+
+            .contact-info {
+                width: 100%;
+                text-align: center;
+
+                ul {
+                    margin: 0 38%;
+                    font-size: 4rem;
+                }
+            }
+        }
+
+
+    }
+
+}
+
+
+
+
+
+
+
+
+/********BELOW 768px*******/
+@media (max-width: 48em) {
+    // html {
+    //     font-size: 60%;
+    // }
+
+    p {
+        font-size: 2.2rem;
+    }
+
+    main .plan .plan-ahead-container .plan-ahead .button {
+        width: 145px;
+    }
+
+    main .plan .mobile-new-locations-container .small-devices-new-locations .button {
+        width: 145px;
+    }
+
+    .blog-main .blog-main-container .fivedays .fivedays-img-container img {
+        width: 97%;
+    }
+
+    .blog-small-devices-title .blog-small-devices-header-content a h2 {
+        font-size: 7.5rem;
+        margin-top: -15%;
+    }
+
+    .blog-main {
+        .fivedays-content {
+            h3 {
+                letter-spacing: .2rem;
+            }
+        }
+
+        .comments {
+            width: 110%;
+
+            .comments-one {
+                .comments-one-content {
+                    h4 {
+                        letter-spacing: 0;
+                    }
+                }
+            }
+
+            .comments-two {
+                .comments-two-content {
+                    h4 {
+                        letter-spacing: 0;
+                    }
+                }
+            }
+
+        }
+
+
+
+    }
+}
+
+
+
+/********BELOW 600px*******/
+@media (max-width: 37.5em) {
+    html {
+        font-size: 50%;
+    }
+}
+
+/********BELOW 496px*******/
+@media (max-width: 31em) {
+    html {
+        font-size: 45%;
+    }
+
+    .blog-main .fivedays-content h3 {
+        letter-spacing: 0;
+    }
+
+    .wrapper {
+
+        width: 90%;
+    }
+
+    .blog-main {
+        margin: 5% 5%;
+    }
+    .contact-small-devices-header .hamburger-container span {
+        width: 40px;
+    }
+
+    .contact-small-devices-title h1 {
+        padding-top: 4%;
+    }
+
+    // .contact-small-devices-title .contact-small-devices-header-content a h2 {
+    //     margin-top: -7%;}
+}
+
+/********BELOW 400px*******/
+@media(max-width:25em){
+    html {
+        font-size: 35%;
+    }
+
+    main {
+        .plan {
+            .plan-ahead-container {
+                .plan-ahead {
+                    .button {
+                        width: 130px;
+                        height: 35px;
+                    }
+                }
+            }
+
+            .new-locations-container {
+                .new-locations {
+                    .button {
+                        width: 130px;
+                        height: 35px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/********BELOW 320px*******/
+ @media(max-width:20em){
+    html {
+        font-size: 28%;
+    }
+
+    .contact-small-devices-header .hamburger-container span {
+        width: 30px;
+    }
+
+    .small-devices-header .hamburger-container span {
+        width: 30px;
+        top:15px 
+    }
+
+    .blog-small-devices-header .hamburger-container span{
+        width: 30px;
+        top:15px 
+    }
+    
+ }

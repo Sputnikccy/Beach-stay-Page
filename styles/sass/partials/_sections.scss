@@ -1,31 +1,259 @@
 @use "./variables" as *;
-main{
-    .about-beachstay{
+
+main {
+    .about-beachstay {
         display: flex;
         justify-content: space-between;
         margin: 5% auto;
 
-        .about-beachstay-content{
+        .about-beachstay-content {
             margin-right: 7%;
-            flex:3.6;
-            .button-container{
+            flex: 3.5;
+
+            .button-container {
                 margin-top: 2%;
             }
         }
 
-        .about-beachstay-img{
+        .about-beachstay-img {
             width: 100%;
-            flex: 1.4;
+            height: 100%;
+            flex: 1.5;
             margin: auto 0.01%;
-    
-            img{
+
+            img {
                 max-width: 100%;
                 max-height: 100%;
-                box-shadow: -10px 10px$primary;
-                object-fit:cover;
+                box-shadow: -20px 20px $primary;
+                object-fit: cover;
+            }
+        }
+    } // -- .about-beachstay end -------
+
+   
+   
+    // -- .small-devices-about-beachstay start -------
+
+    .small-devices-about-beachstay {
+        display: flex;
+        flex-direction: column;
+        justify-content:space-between;
+        align-items: center;
+        margin-bottom: 5%;
+       
+        // margin: 5% auto;
+
+        .small-devices-about-beachstay-content {
+            // margin-right: 7%;
+            // flex: 3.5;
+            text-align: center;
+
+            .button-container {
+                margin-top: 2%;
             }
         }
 
-        
+        .small-devices-about-beachstay-img {
+            // width: 100%;
+            // height: 100%;
+            margin-bottom: 5%;
+            margin-top: 5%;
+           display: flex;
+           align-items: center;
+           justify-content: center;
+            
+           
+
+            img {
+                max-width: 100%;
+                max-height: 100%;
+               
+                
+                box-shadow: -20px 20px $primary;
+                object-fit: cover;
+            }
+        }
     }
+    // -- .small-devices-about-beachstay end -------
+
+
+    .gallery-container {
+        background-color: $quaternary;
+        margin-bottom: 5%;
+
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+
+
+            img {
+               
+                max-width: 31%;
+
+                &:nth-child(-n+2) {
+                    margin-right: 3.3%;
+                }
+            }
+
+        }
+    }
+
+    // -- .gallery end -------
+
+
+.bottom-nav-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 7%;
+
+    .bottomnav-container {
+        padding-right: 5%;
+        position: relative;
+        top: 4%;
+
+        a {
+            display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: $primary;
+
+            i {
+                color: white;
+                font-size: 2.2rem;
+                padding: 8px;
+            }
+        }
+    }
+
+    .beach-houses-bottom-nav-section,
+    .community-bottom-nav-section,
+    .blog-bottom-nav-section,
+    .get-in-touch-bottom-nav-section {
+        flex-basis: 48%;
+        display: flex;
+    }
+
+    .beach-houses-bottom-nav-section,
+    .community-bottom-nav-section {
+        padding-bottom: 3%;
+    }
+
+}
+
+// -- .bottom-nav end -------
+
+.plan {
+    background-color: $quaternary;
+    h3{
+        color:$secondary;
+    }
+
+    .plan-ahead-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5%;
+
+        .plan-img-left {
+            flex-basis: 45%;
+            margin-right: 10%;
+            position: relative;
+            top: -15px;
+
+            img {
+                box-shadow: 20px 20px $primary;
+            }
+        }
+
+
+        .plan-ahead {
+            margin-right: 5%;
+            flex-basis: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .plan-ahead-content {
+                margin-top: 12%;
+
+                p {
+                    padding-top: 15px;
+                }
+            }
+
+            .button {
+                display: flex;
+                width: 155px;
+                height: 40px;
+                padding: 8px 18px;
+                justify-content: center;
+                align-items: center;
+                margin-top: 3%;
+
+            }
+        }
+
+    }
+
+
+    .new-locations-container {
+        display: flex;
+        justify-content: space-between;
+        // margin-bottom: 8%;
+
+        .new-locations {
+            margin-right: 5%;
+            flex-basis: 42%;
+            display: flex;
+            flex-direction: column;
+            // justify-content: space-between;
+            align-items: flex-end;
+            margin-left: 8%;
+
+
+            .new-locations-content {
+                // display: flex;
+                // flex-direction: column;
+                // align-items: flex-end;
+                text-align:right;
+                p {
+                    padding-top: 15px;
+                    
+                }
+            }
+
+            .button {
+                display: flex;
+                width: 155px;
+                height: 40px;
+                padding: 8px 18px;
+                justify-content:center;
+                align-items: center;
+                margin-top: 5%;
+
+
+            }
+        }
+
+        .img-right {
+            flex-basis: 45%;
+            position: relative;
+            top: 15px;
+            margin-left: 5%;
+            margin-top: 15px;
+        
+            img{
+                max-width: 100%;
+                box-shadow: -20px 20px $primary;
+            }
+           
+
+            
+        }
+    }
+}
 }

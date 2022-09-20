@@ -1,0 +1,377 @@
+@use "./variables" as *;
+
+.blog-header {
+    background: url(../beach-final-images/blog-image-1.jpg) no-repeat top center/100vw;
+    height: 60vh;
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 2%;
+    }
+
+    .title {
+        margin-left: 10%;
+        margin-top: 10%;
+
+        a {
+
+            // margin-left: 5%;
+            h2 {
+                font-size: 8rem;
+                color: $iceBlue;
+            }
+        }
+    }
+}
+
+/* ------small-devices-header start------ */
+.blog-small-devices-header {
+    display: block;
+    padding: 0 18px;
+    
+
+    height: 40px;
+
+
+    #toggler {
+        display: none;
+        height: 50px;
+        width: 50px;
+
+
+        &:checked+label .hamburger-container
+        
+        span {
+            position: fixed;
+            
+            
+
+            &:nth-child(1) {
+                transform: rotate(45deg);
+                // top: 6px;
+                top:50px;
+                transition: top .2s ease-in-out, transform .2s ease-in-out .2s;
+            }
+
+            &:nth-child(2) {
+                transform: rotate(-45deg);
+                // top: -6px;
+                top:45px;
+                transition: top .2s ease-in-out, transform .2s ease-in-out .2s;
+            }
+
+        }
+
+        &:checked~.nav-items {
+            transform: scaleY(1);
+            background-color: $primary;
+            opacity: 1;
+            margin-top: -10%;
+            //fix hamburger menu when clicking it
+            position: fixed;
+        }
+
+
+
+    }
+
+    .hamburger-container {
+        display: block;
+        width: 50px;
+        height: 60px;
+        position: relative;
+        top: 25px;
+        // top: 10rem;
+        left: 85%;
+
+        span {
+            display: block;
+            height: 6px;
+            width: 50px;
+            background-color: white;
+            position: relative;
+            transition: transform .2s ease-in-out, top .2s ease-in-out .2s;
+            top: 6px;
+            z-index: 999;
+
+            &:nth-child(2) {
+                margin-top: 7px;
+            }
+        }
+
+    }
+
+    .nav-items {
+        height: 105vh;
+        width: 100%;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .1s ease-in-out .1s, opacity .2s ease-in-out .1s;
+        transform-origin: 50% 0;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        z-index: 900;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+
+            li {
+                padding: 18% 0;
+                font-family: 'Lato';
+
+                a {
+                    color: $iceBlue;
+
+                    font-size: 40px;
+
+                    &:hover {
+                        color: $tertiary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ------small-devices-header end------- */
+/* ------small-devices-title start------ */
+
+.blog-small-devices-title {
+    background: url(../beach-final-images/blog-image-1.jpg) no-repeat top center / cover;
+    height: 50vh;
+    margin-top: -8%;
+
+    h1 {
+        padding-top: 8%;
+    }
+
+    .blog-small-devices-header-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        // padding-top: 40%;
+        margin: 20% auto;
+
+        a {
+            h2 {
+                // font-family: $logoFont;
+                color: $iceBlue;
+                font-size: 7rem;
+            }
+
+        }
+
+    }
+}
+
+/* ------small-devices-title end------ */
+
+
+
+
+
+
+.blog-main {
+
+    .blog-main-container {
+        display: flex;
+        justify-content: space-between;
+
+        // overflow: auto;
+        .fivedays {
+            border-right: 3px solid $primary;
+            border-bottom: 3px solid $primary;
+            margin-right: 8%;
+
+            .fivedays-content {
+                padding-left: 4%;
+
+                .article {
+                    color: black
+                }
+
+                .date {
+                    font-style: italic;
+                    color: $secondary;
+                    margin-bottom: 2.5rem;
+
+                    span {
+                        font-weight: 900;
+                    }
+                }
+            }
+
+            .fivedays-img-container {
+                // width: 80%;
+                position: relative;
+                top: -8%;
+
+                img {
+                    box-shadow: 18px 18px $primary;
+                    width: 97.8%;
+                }
+            }
+
+            .fivedays-content {
+                margin: 10%;
+                margin-top: -5%
+            }
+        }
+
+        .sidebar {
+            position: sticky;
+            top: 0;
+            padding-top: 5%;
+            // display: flex;
+            // flex-direction: column;
+            height: .1vh;
+            flex-basis: 130%;
+
+            h4 {
+                color: $secondary;
+                font-size: 2.6rem;
+                margin-top: 20px;
+            }
+
+            p,
+            li {
+                color: black;
+            }
+
+            .img-container {
+                width: 100%;
+
+            }
+
+            .mission {
+                a {
+                    color: $tertiary;
+                }
+            }
+
+            .posts {
+                ul {
+                    margin-left: 5%;
+
+                    li {
+                        &::marker {
+                            color: $primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .comments {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 70%;
+        margin-left: 2.5%;
+
+        h3 {
+            font-family: 'Bergen';
+            color: black;
+            font-size: 2.8rem;
+        }
+
+        .comments-one {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 3%;
+
+            .comments-one-img {
+                margin-right: 5%;
+                margin-top: 2.8%;
+                width: 50%;
+
+                img {
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+
+            .comments-one-content {
+                h4 {
+                    font-size: 2.2rem;
+                    margin: 0;
+                    color: $secondary;
+                    letter-spacing: .2rem;
+                }
+            }
+        }
+
+        .comments-two {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 5%;
+            margin-bottom: 5%;
+
+            .comments-two-img {
+                margin-right: 5%;
+                margin-top: 2.8%;
+                width: 35%;
+
+                img {
+                    max-width: 100%;
+                    width: 100%;
+                }
+            }
+
+            .comments-two-content {
+                h4 {
+                    font-size: 2.2rem;
+                    margin: 0;
+                    color: $secondary;
+                    letter-spacing: .2rem;
+                }
+            }
+        }
+    }
+}
+
+
+
+.blog-submit {
+    .form-container {
+        width: 70%;
+
+        .personal-details {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4%;
+            font-family: 'Lato-light';
+
+            #name,
+            #email-address {
+                border-bottom: 2px solid $primary;
+                padding-right: 3rem;
+                width: 45%;
+                padding: 2rem;
+            }
+        }
+
+        #user-commentary {
+            border: 2px solid $primary;
+            width: 100%;
+            resize: none;
+            padding: 2rem;
+            outline: none;
+        }
+
+        button {
+            margin-top: 3%;
+            width: 100%;
+        }
+    }
+}

@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <header>
+    <header class="home-header">
         <div class="wrapper">
             <div class="nav">
                 <h1><a href="#">BEACHSTAYS<span class="sr-only">Home Page</span></a></h1>
@@ -28,7 +28,7 @@
         </div>
 
         <div class="header-img">
-            <img src="../beach-stay/beach-final-images/header-box.jpg" alt="">
+            <img src="../beach-stay/beach-final-images/header-box.jpg" alt="a pair of sunglasses on the beach">
         </div>
         <div class="header-content">
             <h2 class="welcome">welcome to</h2>
@@ -39,6 +39,55 @@
 
     </header>
     <!-------header end -------->
+
+    <!--------small-devices-header start------------------------------>
+    <div class="small-devices-header">
+
+        <input type="checkbox" id="toggler">
+        <label for="toggler">
+            <div class="hamburger-container">
+                <span></span>
+                <span></span>
+            </div>
+        </label>
+
+        <div class="nav-items">
+            <ul>
+                <li>
+                    <a href="index.html">HOME</a>
+                </li>
+                <li>
+                    <a href="#about">ABOUT</a>
+                </li>
+                <li><a href="./blog.html">BLOG</a>
+                </li>
+                <li><a href="./contact.html">CONTACT</a>
+                </li>
+            </ul>
+            </nav>
+        </div>
+    </div>
+    <!--------small-devices-header end--------------------------------->
+
+    <!--------small-devices-title start------------------------------>
+    <div class="small-devices-title">
+
+        <div class="wrapper">
+            <div class="logo">
+                <h1><a href="#">BEACHSTAYS<span class="sr-only">Home Page</span></a></h1>
+            </div>
+        </div>
+
+        <div class="small-devices-header-content">
+            <h2 class="welcome">welcome to</h2>
+            <a href="#">
+                <h2>BEACHSTAYS</h2>
+            </a>
+        </div>
+
+    </div>
+    <!--------small-devices-title end------------------------------>
+
 
     <main>
         <section class="about-beachstay wrapper" id="about">
@@ -58,18 +107,42 @@
             </div>
         </section><!-- .about-beachstay end -->
 
-        <section class="gallery" id="#gallery">
-            <div class="wrapper">
-                <img src="../beach-stay/beach-final-images/gallery-image1.jpg" alt="">
-                <img src="../beach-stay/beach-final-images/gallery-image2.jpg" alt="">
-                <img src="../beach-stay/beach-final-images/gallery-image3.jpg" alt="">
+
+
+        <!-- .small-devices-about-beachstay start -->
+        <section class="small-devices-about-beachstay wrapper" id="about">
+            <div class="small-devices-about-beachstay-img">
+                <img src="../beach-stay/beach-final-images/small-box.jpg" alt="An oceanview room">
             </div>
+            <div class="small-devices-about-beachstay-content">
+                <h3>Visit Guyana</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla pulvinar tortor nulla elementum
+                    eleifend. Vestibulum consequat vestibulum felis pharetra luctus. Quisque interdum orci quis
+                    convallis dapibus nulla pulvinar tortor. Lorem ipsum dolor sit amet,consectetur adipiscing
+                    elit. Nulla pulvinar tortor nulla elementum eleifend. Vestibulum consequat vestibulum felis
+                    pharetra luctus. Quisque interdum orci quis convallis. </p>
+                <div class="button-container">
+                    <a href="./blog.html" class="button">find out more</a>
+                </div>
+            </div>
+
+        </section>
+        <!-- .small-devices-about-beachstay end -->
+
+
+
+        <section class="gallery-container">
+            <section class="gallery wrapper" id="#gallery">
+                <img src="../beach-stay/beach-final-images/gallery-image1.jpg" alt="house by the sea">
+                <img src="../beach-stay/beach-final-images/gallery-image2.jpg" alt="vacation homes">
+                <img src="../beach-stay/beach-final-images/gallery-image3.jpg" alt="house by the beach with trees">
+            </section>
         </section><!-- .gallery end -->
 
         <section class="bottom-nav">
             <div class="wrapper">
                 <div class="bottom-nav-content">
-                    <div class="beach-houses bottom-nav-section">
+                    <div class="beach-houses-bottom-nav-section">
                         <div class="bottomnav-container">
                             <a href="#gallery" class="icon-container">
                                 <i class="fa-solid fa-house-chimney bottom-icons"></i>
@@ -84,7 +157,7 @@
                         </div>
                     </div> <!-- .beach-houses end -->
 
-                    <div class="community bottom-nav-section">
+                    <div class="community-bottom-nav-section">
                         <div class="bottomnav-container">
                             <a href="#" class="icon-container">
                                 <i class="fa-solid fa-users bottom-icons"></i>
@@ -100,7 +173,7 @@
                         </div>
                     </div><!-- .community end -->
 
-                    <div class="blog bottom-nav-section">
+                    <div class="blog-bottom-nav-section">
                         <div class="bottomnav-container">
                             <a href="./blog.html" class="icon-container">
                                 <i class="fa-solid fa-file bottom-icons"></i>
@@ -116,7 +189,7 @@
                         </div>
                     </div><!-- .blog end -->
 
-                    <div class="get-in-touch bottom-nav-section">
+                    <div class="get-in-touch-bottom-nav-section">
                         <div class="bottomnav-container">
                             <a href="./contact.html" class="icon-container">
                                 <i class="fa-solid fa-phone-flip bottom-icons"></i>
@@ -136,40 +209,88 @@
         </section><!-- .bottom-nav end -->
 
         <section class="plan">
-            <div class="plan-img-left">
-                <img src="./beach-final-images/left-image.jpg" alt="">
-            </div><!-- .plan-img-left end -->
-            <div class="plan-ahead wrapper">
-                <h3>Plan ahead</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare condimentum.
-                    Nam suscipit odio loremid vestibulum lacus tristique eu. Sed urna ex.
-                </p>
-                <a href="#" class="button">READ MORE</a>
-            </div><!-- .plan-ahead end -->
-            <div class="new-locations wrapper">
-                <h3>Plan ahead</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare condimentum.
-                    Nam suscipit odio loremid vestibulum lacus tristique eu. Sed urna ex.
-                </p>
-                <a href="#" class="button">READ MORE</a>
+            <div class="plan-ahead-container">
+                <div class="plan-img-left">
+                    <img src="./beach-final-images/left-image.jpg" alt="vacation homes under blue sky">
+                </div><!-- .plan-img-left end -->
+                <div class="plan-ahead">
+                    <div class="plan-ahead-content">
+                        <h3>Plan ahead</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare
+                            condimentum.
+                            Nam suscipit odio loremid vestibulum lacus tristique eu. Sed urna ex.
+                        </p>
+                    </div>
+                    <a href="#" class="button">READ MORE</a>
+                </div>
+            </div> <!-- .plan-ahead-container end -->
+
+            <!-- .small-devices-new-locations start -->
+            <div class="mobile-new-locations-container">
+                <div class="small-devices-img-right">
+                    <img src="./beach-final-images/right-image.jpg" alt="sea waves rolling among reefs">
+                </div> <!-- img-right end -->
+
+                <div class="wrapper">
+                    <div class="small-devices-new-locations">
+                        <div class="small-devices-new-locations-content">
+                            <h3>New locations</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare
+                                condimentum.
+                                Nam suscipit odio loremid vestibulum lacus tristique eu. Sed urna ex.
+                            </p>
+                        </div>
+                        <a href="#" class="button">READ MORE</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+
+
+            <!-- .small-devices-new-locations end -->
+
+
+
+
+            <div class="new-locations-container">
+                <div class="new-locations">
+                    <div class="new-locations-content">
+                        <h3>New locations</h3>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In et risus nec orci ornare
+                            condimentum.
+                            Nam suscipit odio loremid vestibulum lacus tristique eu. Sed urna ex.
+                        </p>
+                    </div>
+                    <a href="#" class="button">READ MORE</a>
+                </div>
+                <div class="img-right">
+                    <img src="./beach-final-images/right-image.jpg" alt="vacation homes under blue sky">
+                </div><!-- .plan-img-left end -->
             </div><!-- .new-locations end -->
+
+
         </section><!-- .plan end -->
     </main>
     <!-------main end -------->
 
     <footer>
-        <div class="footer-img"></div>
+        <div class="footer-img">
+            <img src="./beach-final-images/banner-image.jpg" alt="cotages on the beach by the sea">
+        </div>
         <div class="footer-content">
-            <div class="wrapper">
-                <h3>Free trip with Beachstays</h3>
-                <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.In et risus nec orci ornare condimentum. Nam
-                    suscipit odio lorem,id vestibulum lacus tristique eu.Sed urna ex,porttitor nec iaculis at,
-                    consectetur vel turpis.Vestibulum ultricies,felis in lacinia porttitor, tortor metus convallis
-                    augue,
-                    at fermentum diam erat nec quam. Nulla facilisi.
-                </p>
-                <a href="#" class="button">FIND OUT MORE</a>
-            </div>
+
+            <h3>Free trip with Beachstays</h3>
+            <p>Lorem ipsum dolor sit amet,consectetur adipiscing elit.In et risus nec orci ornare condimentum. Nam
+                suscipit odio lorem,id vestibulum lacus tristique eu.Sed urna ex,porttitor nec iaculis at,
+                consectetur vel turpis.Vestibulum ultricies,felis in lacinia porttitor, tortor metus convallis
+                augue,
+                at fermentum diam erat nec quam. Nulla facilisi.
+            </p>
+            <a href="#" class="button">FIND OUT MORE</a>
+        </div>
+
+        <div class="footer-ending">
+            Copyright ⓒ 2019 HakerYou
         </div>
     </footer>
 

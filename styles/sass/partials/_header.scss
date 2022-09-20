@@ -43,19 +43,20 @@ header {
 
     .header-content {
         position: absolute;
-        top: 55%;
+        top: 38%;
+        // bottom: 30%;
         left: 31.5%;
         display: flex;
         flex-direction: column;
 
 
         .welcome {
-            font: bold 6rem 'Lato';
+            font: bold 5rem 'Lato';
             color: $tertiary
         }
 
         a h2 {
-            font: 10rem $logoFont;
+            font: 8.2rem $logoFont;
             color: $secondary;
         }
     }
@@ -70,8 +71,152 @@ header {
             max-width: 100%;
         }
     }
-
-
-
 }
 
+
+/* ------small-devices-header start------ */
+.small-devices-header {
+    display: block;
+    padding: 0 18px;
+
+    height: 40px;
+
+
+    #toggler {
+        display: none;
+        height: 50px;
+        width: 50px;
+
+
+        &:checked+label .hamburger-container span {
+            position: fixed;
+
+            &:nth-child(1) {
+                transform: rotate(45deg);
+                top: 50px;
+                transition: top .2s ease-in-out, transform .2s ease-in-out .2s;
+            }
+
+            &:nth-child(2) {
+                transform: rotate(-45deg);
+                top: 45px;
+                transition: top .2s ease-in-out, transform .2s ease-in-out .2s;
+            }
+
+        }
+
+        &:checked~.nav-items {
+            transform: scaleY(1);
+            // background: url(../beach-final-images/home-image-1.jpg) no-repeat top center / cover;
+            background-color: $primary;
+            opacity: 1;
+            margin-top: -10%;
+            position: fixed;
+        }
+
+    }
+
+    .hamburger-container {
+        display: block;
+        width: 50px;
+        height: 60px;
+        position: relative;
+        top: 22px;
+        // top: 10rem;
+        left: 85%;
+
+        span {
+            display: block;
+            height: 6px;
+            width: 40px;
+            background-color: white;
+            position: relative;
+            transition: transform .2s ease-in-out, top .2s ease-in-out .2s;
+            top: 7px;
+            z-index: 999;
+
+            &:nth-child(2) {
+                margin-top: 7px;
+            }
+        }
+
+    }
+
+    .nav-items {
+        height: 105vh;
+        width: 100%;
+        position: absolute;
+        top: 44px;
+        left: 0;
+        transform: scaleY(0);
+        transition: transform .1s ease-in-out .1s, opacity .2s ease-in-out .1s;
+        transform-origin: 50% 0;
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        z-index: 900;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+
+            li {
+                padding: 18% 0;
+                font-family: 'Lato';
+
+                a {
+                    color: $iceBlue;
+                   
+                    font-size: 40px;
+
+                    &:hover {
+                        color: $tertiary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* ------small-devices-header end------- */
+
+/* ------small-devices-title start------ */
+
+.small-devices-title {
+    background: url(../beach-final-images/home-image-1.jpg) no-repeat top center / cover;
+    height: 100vh;
+    margin-top: -8%;
+
+    h1 {
+        padding-top: 8%;
+    }
+
+    .small-devices-header-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 40%;
+
+        h2 {
+            color: $tertiary;
+            font-size: 5.5rem;
+            margin-bottom: 5rem;
+        }
+
+        a {
+            h2 {
+                font-family: $logoFont;
+                color: $secondary;
+                font-size: 7rem;
+            }
+
+        }
+
+    }
+}
+
+/* ------small-devices-title end------ */

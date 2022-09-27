@@ -88,7 +88,7 @@
             .plan-ahead-container {
                 .plan-ahead {
                     .button {
-                        width: 150px;
+                        width: 155px;
                         height: 40px;
                     }
                 }
@@ -97,7 +97,7 @@
             .new-locations-container {
                 .new-locations {
                     .button {
-                        width: 150px;
+                        width: 155px;
                         height: 40px;
                     }
                 }
@@ -636,6 +636,10 @@
         padding-top: 4%;
     }
 
+    main .plan .mobile-new-locations-container .small-devices-img-right img{
+        margin-bottom: 15px;
+    }
+
     // .contact-small-devices-title .contact-small-devices-header-content a h2 {
     //     margin-top: -7%;}
 }
@@ -666,6 +670,13 @@
                 }
             }
         }
+    }
+
+    .blog-small-devices-header .hamburger-container{
+        top:30px
+    }
+    .small-devices-header .hamburger-container{
+        top:35px
     }
 }
 

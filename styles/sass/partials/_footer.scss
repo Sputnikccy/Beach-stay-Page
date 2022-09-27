@@ -1,30 +1,40 @@
 @use "./variables" as*;
-footer{
-.footer-img{
-   img{
-    max-width: 100vw;
-   }
-}
 
-.footer-content{
-    margin: 10%;
-    margin-bottom: 15%;
-    text-align: center;
-    
-    
-    p{
-        margin-bottom: 2%;
+footer {
+    .footer-img {
+        img {
+            max-width: 100vw;
+        }
     }
 
+    .footer-content {
+        margin: 10%;
+        margin-bottom: 15%;
+        text-align: center;
+
+
+        p {
+            margin-bottom: 2%;
+        }
+
     }
 
-    .footer-ending{
+    .footer-ending {
         margin-top: 15%;
     }
-   }
 
-
-
-
-
-
+    .scroll-to-top {
+        width: 4rem;
+        height: 4rem;
+        background-color: $primary;
+        display: none;
+        font-family: 'Lato';
+        position: fixed;
+        bottom: 5%;
+        right: 4%;
+        border-radius: 50%;
+        font-size: 2rem;
+        text-align: center;
+        color:white;
+    }
+}

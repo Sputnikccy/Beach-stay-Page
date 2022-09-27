@@ -488,7 +488,7 @@ header .header-img img {
 .small-devices-header #toggler:checked + label .hamburger-container span:nth-child(2) {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  top: 45px;
+  top: 44px;
   -webkit-transition: top 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out 0.2s;
   transition: top 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out 0.2s;
   transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
@@ -512,7 +512,7 @@ header .header-img img {
 }
 .small-devices-header .hamburger-container span {
   display: block;
-  height: 6px;
+  height: 4px;
   width: 40px;
   background-color: white;
   position: relative;
@@ -811,7 +811,7 @@ main .plan .plan-ahead-container .plan-ahead .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 155px;
+  width: 160px;
   height: 40px;
   padding: 8px 18px;
   -webkit-box-pack: center;
@@ -856,7 +856,7 @@ main .plan .new-locations-container .new-locations .button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 155px;
+  width: 160px;
   height: 40px;
   padding: 8px 18px;
   -webkit-box-pack: center;
@@ -894,6 +894,20 @@ footer .footer-content p {
 }
 footer .footer-ending {
   margin-top: 15%;
+}
+footer .scroll-to-top {
+  width: 4rem;
+  height: 4rem;
+  background-color: #50E3C2;
+  display: none;
+  font-family: "Lato";
+  position: fixed;
+  bottom: 5%;
+  right: 4%;
+  border-radius: 50%;
+  font-size: 2rem;
+  text-align: center;
+  color: white;
 }
 
 .blog-header {
@@ -944,7 +958,7 @@ footer .footer-ending {
 .blog-small-devices-header #toggler:checked + label .hamburger-container span:nth-child(2) {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  top: 45px;
+  top: 44px;
   -webkit-transition: top 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out 0.2s;
   transition: top 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out 0.2s;
   transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
@@ -968,8 +982,8 @@ footer .footer-ending {
 }
 .blog-small-devices-header .hamburger-container span {
   display: block;
-  height: 6px;
-  width: 50px;
+  height: 4px;
+  width: 40px;
   background-color: white;
   position: relative;
   -webkit-transition: top 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out;
@@ -1279,7 +1293,7 @@ body {
 .contact-small-devices-header #toggler:checked + label .hamburger-container span:nth-child(2) {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
-  top: 45px;
+  top: 44px;
   -webkit-transition: top 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out 0.2s;
   transition: top 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out 0.2s;
   transition: top 0.2s ease-in-out, transform 0.2s ease-in-out 0.2s;
@@ -1303,8 +1317,8 @@ body {
 }
 .contact-small-devices-header .hamburger-container span {
   display: block;
-  height: 6px;
-  width: 50px;
+  height: 4px;
+  width: 40px;
   background-color: white;
   position: relative;
   -webkit-transition: top 0.2s ease-in-out 0.2s, -webkit-transform 0.2s ease-in-out;
@@ -1527,11 +1541,11 @@ body {
     font-size: 62.5%;
   }
   main .plan .plan-ahead-container .plan-ahead .button {
-    width: 150px;
+    width: 155px;
     height: 40px;
   }
   main .plan .new-locations-container .new-locations .button {
-    width: 150px;
+    width: 155px;
     height: 40px;
   }
   .blog-main .blog-main-container .fivedays .fivedays-img-container {
@@ -1901,6 +1915,9 @@ main .bottom-nav-content .get-in-touch-bottom-nav-section {
   .contact-small-devices-title h1 {
     padding-top: 4%;
   }
+  main .plan .mobile-new-locations-container .small-devices-img-right img {
+    margin-bottom: 15px;
+  }
 }
 /********BELOW 400px*******/
 @media (max-width: 25em) {
@@ -1914,6 +1931,12 @@ main .bottom-nav-content .get-in-touch-bottom-nav-section {
   main .plan .new-locations-container .new-locations .button {
     width: 130px;
     height: 35px;
+  }
+  .blog-small-devices-header .hamburger-container {
+    top: 30px;
+  }
+  .small-devices-header .hamburger-container {
+    top: 35px;
   }
 }
 /********BELOW 320px*******/

@@ -28,9 +28,12 @@ function handleScroll() {
 }
 document.addEventListener("scroll", handleScroll)
 
-// scrollBtn.addEventListener('click', () => {
-//     document.documentElement.scrollTop = 0;
-//     document.body.scrollTop = 0;
-// }
-
-// )
+//mouse decoration
+const mouseDecoration = document.querySelector('.mouse-decoration');
+document.addEventListener('mousemove', function (e) {
+    let x = e.pageX;
+    let y = e.pageY;
+    // console.log('coordinate x is:' + x + 'coordinate y is:' + y);
+    mouseDecoration.style.left = x - 50 + 'px';
+    mouseDecoration.style.top = y - 40 + 'px';
+})

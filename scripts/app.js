@@ -1,7 +1,4 @@
 //form info validation
-// window.onload = function () {
-// }
-
 const userName = document.getElementById('name');
 const userEmail = document.getElementById('email-address');
 const userMsg = document.getElementById('user-commentary');
@@ -65,3 +62,13 @@ function handleScroll() {
     }
 }
 document.addEventListener("scroll", handleScroll)
+
+//mouse decoration
+const mouseDecoration = document.querySelector('.mouse-decoration');
+document.addEventListener('mousemove', function (e) {
+    let x = e.pageX;
+    let y = e.pageY;
+    // console.log('coordinate x is:' + x + 'coordinate y is:' + y);
+    mouseDecoration.style.left = x - 50 + 'px';
+    mouseDecoration.style.top = y - 40 + 'px';
+})

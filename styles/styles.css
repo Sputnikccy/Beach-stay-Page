@@ -615,6 +615,13 @@ header .header-img img {
 }
 
 /* ------small-devices-title end------ */
+.mouse-decoration {
+  position: absolute;
+  width: 5rem;
+  height: 5rem;
+  z-index: 99;
+}
+
 main .about-beachstay {
   display: -webkit-box;
   display: -ms-flexbox;
